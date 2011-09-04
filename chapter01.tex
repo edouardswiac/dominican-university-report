@@ -1,3 +1,40 @@
-\chapter{Learning Erlang programming language and its application in telephony systems}
+\chapter{Using Erlang/OTP and telephony systems}
 \label{ch:erlang}
 
+functional, concurrent programming language,
+write multicore programs to scale
+fault-tolerant applications that can be modified  without taking them out of service
+functional programming 
+lamnguage that has been battke tested in real large scale industruak products, with great librairies and an active use community
+virtues of functional programming functional programming forbis code with side effects. side effects and concurrency don't mix, You can have sequential code with side effects, or you can have code and concurrency that is free from side effects. no middle way
+Erlang is a language where concurrency belongs to the programming language and not the operating system. Erlang makes parallel program- ming easy by modeling the world as sets of parallel processes that can interact only by exchanging messages. In the Erlang world, there are parallel processes but no locks, no synchronized methods, and no pos- sibility of shared memory corruption, since there is no shared memory.
+Erlang programs can be made from thousands to millions of extremely lightweight processes that can run on a single processor, can run on a multicore processor, or can run on a network of processors.
+It’s about concurrency. It’s about distribution. It’s about fault toler- ance. It’s about functional programming. It’s about programming a dis- tributed concurrent system without locks and mutexes but using only pure message passing. It’s about speeding up your programs on multi- core CPUs. It’s about writing distributed applications that allow people to interact with each other. It’s about design methods and behaviors for writing fault-tolerant and distributed systems. It’s about modeling concurrency and mapping those models onto computer programs, a process I call concurrency-oriented programming.
+OTP
+a high-level, concurrent, robust, soft real-time system that will scale in line with demand
+T-Mobile uses Erlang in its SMS and authentication systems.
+Motorola is using Erlang in call processing products in the public-safety industry.
+Ericsson uses Erlang in its support nodes, used in GPRS and 3G mobile networks worldwide.
+mid-1980s, Ericsson’s Computer Science Laboratory was given the task of in- vestigating programming languages suitable for programming the next generation of telecom products.
+ Erlang was influenced by functional languages such as ML and Miranda, concurrent languages such as ADA, Modula, and Chill, as well as the Prolog logic programming language.
+ Erlang was developed to solve the “time-to-market” requirements of distributed, fault-tolerant, massively concurrent, soft real-time systems.
+ The fact that web services, retail and commercial banking, com- puter telephony, messaging systems, and enterprise integration, to mention but a few, happen to share the same requirements as telecom systems explains why Erlang is gaining headway in these sectors.
+ Concurrency in Erlang is fundamental to its success. Rather than providing threads that share memory, each Erlang process executes in its own memory space and owns its own heap and stack. Processes can’t interfere with each other inadvertently, as is all too easy in threading models, leading to deadlocks and other horrors.
+ Processes communicate with each other via message passing,  Message passing is asynchronous,
+ Erlang concurrency is fast and scalable. Even though Erlang is a high-level language,  Because of this, Erlang can handle high loads with no degradation in throughput, even during sustained peaks.
+ OTP is simultaneously a framework, a set of libraries, and a methodology for structuring applications; it’s really a language extension
+ 
+These are some of the main advan- tages of OTP:
+Productivity—Using OTP makes it possible to produce production-quality sys- tems in a very short time.
+Stability—Code written on top of OTP can focus on the logic and avoid error- prone reimplementations of the typical things that every real-world system needs: process management, servers, state machines, and so on.
+Supervision—The application structure provided by the framework makes it sim- ple to supervise and control the running systems, both automatically and through graphical user interfaces.
+Upgradability—The framework provides patterns for handling code upgrades in a systematic way.
+Reliable code base—The code for the OTP framework is rock solid and has been thoroughly battle tested.
+ ---
+the core concepts and features of the Erlang/OTP plat-
+ form that everything else in OTP builds on:
+Concurrent programming
+- Fault tolerance
+- Distributed programming
+- The Erlang virtual machine and runtime system
+- Erlang’s core functional language
