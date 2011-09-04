@@ -1,0 +1,46 @@
+\documentclass[12pt]{report}
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc} 
+\usepackage[english]{babel} 
+\usepackage{url} 
+\usepackage{lmodern}
+
+\begin{document}
+
+\title{Internship report}
+\author{Edouard Swiac}
+\date{November 2011}
+
+\maketitle
+
+\pagestyle{headings}
+\pagenumbering{roman}
+
+
+\include{ack}
+\include{abstract}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+\pagenumbering{arabic}
+
+\include{introduction}
+\include{chapter01}
+\include{chapter02}
+\include{chapter03}
+\include{chapter04}
+\include{chapter05}
+\include{chapter06}
+\include{chapter07}
+
+
+\include{conclusions}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{biblio}
+
+\end{document}

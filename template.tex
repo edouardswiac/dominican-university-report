@@ -1,0 +1,124 @@
+% A template for master's thesis, W.H. 2006
+% If your superviser wants an another template, use it!
+% This file contains only the cover page and all chapters are in 
+% different files
+\documentclass[12pt]{report}
+
+%useful special symbols:
+\usepackage{amssymb}
+\usepackage{latexsym}
+
+%a useful package if you write url addresses:
+\usepackage{url}
+
+%a package for figures:
+\usepackage[dvips]{color}
+\usepackage{epsfig}
+
+%Default for bibliography style. The alpha style generates references with 
+%first letters and year. If your supervisor asks another style, change this. 
+\bibliographystyle{alpha}
+
+
+%Create your own environments
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+%if you want to use multicolumn tables, uncomment the following:
+%\usepackage{multicol}
+%if you want to use sideway tables or figures, uncomment the following:
+%\usepackage{rotating}
+
+%The following packages are needed e.g. for algorithm environment
+\usepackage{float}
+\usepackage{xspace}
+%Uncomment to include algorithm environment (you need file algorithmwh.sty):
+%\usepackage{algorithmwh}
+
+\textwidth=14.945cm
+\oddsidemargin=0.5cm
+\evensidemargin=0.5cm
+
+%By default, each paragraph begins by an indent (space). If you prefer
+%no indent but an empty line between paragraphs, uncomment the following: 
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{1.5ex plus 0.5ex minus 0.2ex}
+ 
+%%%%%  
+
+\begin{document}
+
+%the title page begins
+\begin{titlepage}
+
+\vspace*{5cm}
+
+\noindent
+\begin{flushleft}
+\setlength{\baselineskip}{2\baselineskip}
+{{\Huge \bf Scalable VoIP systems in a distributed environment}}
+
+\end{flushleft}
+
+\newcommand{\TitleStyle}[1]{{\Large \textbf{#1}}}
+\newcommand{\TitleSpace}{\vspace{2pt}}
+\vspace{2cm}
+\noindent
+{Edouard Swiac}
+
+\vspace{1cm}
+\vspace{\fill}
+\vspace{2cm}
+\begin{tabbing}
+mmmmmmmmmmmmmmmmmmmmmmm\= \kill
+\>Master's thesis \today\\
+\>Department of Computer Science\\
+\>SUPINFO International University\\
+\> \\
+%%\> \\
+\end{tabbing}
+\end{titlepage}
+%the title page ends
+
+%%%%%
+\thispagestyle{empty}
+%Abstract
+\newlength{\origpar}
+\setlength{\origpar}{\parindent}
+\setlength{\parindent}{0pt}
+\input{abstract.tex}
+\setlength{\parindent}{\origpar}
+
+%if you want to include acknowledgements, uncomment the following:
+%\thispagestyle{empty}
+%input{acknowledgement}
+%Now the file is called acknowledgement.tex
+\thispagestyle{empty}
+\tableofcontents
+\clearpage
+
+\renewcommand {\baselinestretch} {1.0}
+\pagebreak 
+\pagenumbering{arabic}
+\input{introduction}
+\input{chapter1}
+\input{chapter2}
+%include all chapters here
+\input{conclusion}
+\newpage
+%include appendexes here
+\input{appendixA.tex}
+%\input{appendixB.tex}
+
+%The following adds references to the table of contents
+\addcontentsline{toc}{chapter}{References}
+
+%Give the name of your bibtex database, here it is dbase.bib
+\bibliography{dbase}
+%If you do not want to use bibtex, comment the previous and uncomment 
+%the following, where references.tex contains the references:
+%input{references}
+\end{document}
+
+
+
