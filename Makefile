@@ -8,3 +8,6 @@ clean-all :
 	rm -f *pdf
 pdf :
 	pdflatex report.tex
+	
+bib :
+	bibtex report
